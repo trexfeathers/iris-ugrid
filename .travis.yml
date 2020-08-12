@@ -91,6 +91,6 @@ install:
 script:
   - >
     echo $(black --version);
-    black --check --exclude "iris/" .;
+    black --diff --exclude "iris/" .;
 
   - pytest -v ./iris_ugrid/tests
